@@ -1,0 +1,45 @@
+{
+  "name": "topology-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/graphs": "^1.4.1",
+    "@antv/g6": "^4.8.24",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "elkjs": "^0.9.3",
+    "html-to-image": "^1.11.11",
+    "jspdf": "^2.5.1",
+    "mongodb": "^6.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "reactflow": "^11.11.2",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:app": "concurrently -k \"yarn start\" \"node ./server.js\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

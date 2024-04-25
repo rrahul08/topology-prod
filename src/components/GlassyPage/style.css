@@ -1,0 +1,246 @@
+body {
+    background-image: url('./vivid-blurred-colorful-background.png')
+}
+
+.upper-layer {
+    display: flex;
+    position: relative;
+    height: 93vh;
+    width: 97vw;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+  margin-top:10px;
+    background: rgba( 255, 255, 255, 0.3 );
+  backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 4;
+  }
+
+  /* li {
+    list-style: none;
+} */
+
+
+
+.reactflow-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+    height: 87vh;
+    width : 97vw;
+    background: rgba( 255, 255, 255, 0.3 );
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur( 7.5px );
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      z-index: 4;
+}
+header {
+    position: absolute;
+      display: flex;
+      flex-direction:row;
+      justify-content: flex-end;  
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    height: 34px;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.25 );
+    border-top: 1px solid rgba( 255, 255, 255, 0.5 );
+    border-left: 1px solid rgba( 255, 255, 255, 0.5 );
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper .icon {
+  position: relative;
+  top: -7px;
+  background: rgb(255 255 255 / 80%);
+  border-radius: 40%;
+  margin: 10px;
+  width: 32px;
+  height: 20px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+.download-icon svg {
+  fill: #fff; /* Sets the color of the SVG */
+  transition: fill 0.3s; /* Smooth transition for color change */
+}
+
+.download-icon:hover svg {
+  fill: #4CAF50; /* Change color on hover */
+  cursor: pointer;
+
+}
+
+
+
+.bookmarkBtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: linear-gradient(178.6deg, rgb(232, 245, 253) 3.3%, rgb(252, 253, 255) 109.6%);;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.IconContainer {
+  width: 30px;
+  height: 25px;
+  background: radial-gradient(circle at 10% 20%, rgb(148, 241, 246) 0%, rgb(148, 189, 246) 100.7%);  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 90%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0E46A3;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.0em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
+
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: rgba( 255, 255, 255, 0.3 );
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur( 7.5px );
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      z-index: 4;
+  padding: 0.4em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	      inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	      -0.5px -0.5px 0px rgba(255,255,255,1),
+	      0.5px 0.5px 0px rgba(0,0,0,0.15),
+	      0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: rgba(255,255,255,0.7);
+}
+
